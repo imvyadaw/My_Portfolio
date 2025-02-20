@@ -214,21 +214,6 @@ footer {
   background-color: var(--text-dark);
   border-radius: 5px;
 }
-.service__card:nth-child(1), /* Web Design */
-.service__card:nth-child(3) { /* Creative Design */
-  display: none;
-}
-
-.service__grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.service__card {
-  max-width: 400px; /* Set a fixed width */
-  text-align: center;
-}
 
 .service__card i {
   font-size: 1.5rem;
@@ -386,5 +371,25 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* glow */
+
+/* Glowing text effect */
+/* @keyframes glow { */
+  /* 0% { */
+    /* text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff; */
+  /* } */
+  /* 20% { */
+    /* text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff; */
+  /* } */
+  /* 60% { */
+    /* text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff; */
+  /* } */
+/* } */
+
+/* Apply glow effect to all text */
+/* body, p, h1, h2, h3, h4, h5, h6, span, b, a, button { */
+  /* color: white; */
+  /* animation: glow 1.5s infinite alternate; */
+/* } */
 
 
