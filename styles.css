@@ -301,11 +301,13 @@ footer {
 
 .footer__form :is(input, textarea) {
   padding: 1rem;
-  background-color: var(--text-dark);
+  /* background-color: var(--text-dark); */
+  background-color: rgb(224, 223, 223);
   outline: none;
   border: none;
   border-radius: 5px;
-  color: var(--white);
+  /* color: var(--white); */
+  color: #000000;
 }
 
 .footer__form textarea {
