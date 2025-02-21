@@ -51,7 +51,7 @@ img {
   font-weight: 600;
   outline: none;
   border: none;
-  border-radius: 15px;
+  border-radius: 95px;
   color: var(--white);
   background-color: var(--secondary-color);
   cursor: pointer;
@@ -131,7 +131,7 @@ header {
 .action__btns {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
