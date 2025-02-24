@@ -283,7 +283,7 @@ footer {
 
 .social__icons .icon {
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 59px;
   color: var(--white);
   background-color: var(--secondary-color);
   transition: 0.3s;
