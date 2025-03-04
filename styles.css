@@ -386,4 +386,39 @@ footer {
   }
 }
 
+@media (max-width: 473px) {
+    .about_container {
+        flex-direction: column; /* Row se column mein convert */
+        align-items: center;
+        text-align: center;
+    }
+
+    .about_content {
+        align-items: center;
+    }
+
+    .about_details {
+        text-align: center;
+    }
+
+    .action_btns {
+        flex-direction: column; /* Buttons ko vertical arrange karo */
+        gap: 1rem;
+    }
+
+    .service_grid, .project_grid {
+        grid-template-columns: 2fr; /* Ek column layout */
+    }
+
+    .footer_container {
+        grid-template-columns: 2fr; /* Footer bhi single column mein */
+    }
+
+    .header_container h1 {
+        font-size: 3rem; /* Headings chhoti karo */
+        line-height: 3.5rem;
+    }
+}
+
+
 
