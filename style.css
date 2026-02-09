@@ -1,24 +1,20 @@
-/* ====================
-   Variables & Colors
-   ==================== */
 :root {
-    /* Color Scheme - Updated to be more cyberpunk */
-    --primary-dark: #000000; /* True black background */
-    --secondary-dark: #0a0a0a; /* Very dark, almost black */
-    --tertiary-dark: #101010; /* Slightly lighter dark */
-    --accent-color: #00eeff; /* Bright cyan/blue */
-    --accent-hover: #00aaff; /* Slightly darker cyan for hover */
-    --accent-color-2: #00ff66; /* Bright green */
-    --accent-color-3: #ff00aa; /* Bright pink/magenta */
-    --text-primary: #ffffff; /* Pure white */
-    --text-secondary: #e0e0e0; /* Very light gray */
-    --text-muted: #8b949e; /* Unchanged */
-    --border-color: #333333; /* Dark gray for borders */
-    --success-color: #00ff66; /* Same as accent-color-2 */
-    --warning-color: #f0e100; /* Bright yellow */
-    --error-color: #ff0055; /* Bright red */
+    --primary-dark: #000000;  
+    --secondary-dark: #0a0a0a; 
+    --tertiary-dark: #101010;  
+    --accent-color: #00eeff;  
+    --accent-hover: #00aaff;  
+    --accent-color-2: #00ff66; 
+    --accent-color-3: #ff00aa;  
+    --text-primary: #ffffff;  
+    --text-secondary: #e0e0e0;  
+    --text-muted: #8b949e;  
+    --border-color: #333333;  
+    --success-color: #00ff66;  
+    --warning-color: #f0e100;  
+    --error-color: #ff0055;  
 
-    /* Typography */
+     
     --font-family: 'Poppins', sans-serif;
     --fs-xl: 3.5rem;
     --fs-l: 2.5rem;
@@ -26,14 +22,14 @@
     --fs-s: 1.125rem;
     --fs-xs: 0.875rem;
 
-    /* Spacing */
+     
     --spacing-xs: 0.5rem;
     --spacing-s: 1rem;
     --spacing-m: 2rem;
     --spacing-l: 3rem;
     --spacing-xl: 5rem;
 
-    /* Other */
+     
     --border-radius: 0.5rem;
     --transition: all 0.3s ease;
     --box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.9);
@@ -41,9 +37,6 @@
     --glow-effect: 0 0 10px rgba(0, 238, 255, 0.7);
 }
 
-/* ====================
-   Reset & Base Styles
-   ==================== */
 *,
 *::before,
 *::after {
@@ -194,9 +187,7 @@ button, .btn {
     box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
 }
 
-/* ====================
-   Header & Navigation
-   ==================== */
+
 header {
     position: fixed;
     top: 0;
@@ -276,15 +267,13 @@ nav {
     transition: var(--transition);
 }
 
-/* Header scroll state */
+ 
 .header-scroll {
     background-color: var(--secondary-dark);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ====================
-   Hero Section
-   ==================== */
+ 
 .hero {
     min-height: 100vh;
     display: flex;
@@ -449,9 +438,7 @@ nav {
     }
 }
 
-/* ====================
-   About Section
-   ==================== */
+ 
 .about {
     background-color: var(--secondary-dark);
     padding: var(--spacing-xl) 0;
@@ -493,9 +480,7 @@ nav {
     color: var(--text-secondary);
 }
 
-/* ====================
-   Skills Section
-   ==================== */
+ 
 .skills {
     padding: var(--spacing-xl) 0;
     background-color: var(--primary-dark);
@@ -564,9 +549,7 @@ nav {
     font-size: var(--fs-xs);
 }
 
-/* ====================
-   Projects Section
-   ==================== */
+ 
 .projects {
     background-color: var(--secondary-dark);
     padding: var(--spacing-xl) 0;
@@ -586,8 +569,6 @@ nav {
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     height: 100%;
-    /* display:flex; */
-    /* flex-direction: column; */
     
 }
 
@@ -1245,7 +1226,6 @@ footer {
     margin-bottom: 0;
 }
 
-/* Theme toggle button */
 .theme-toggle {
     position: fixed;
     bottom: 30px;
@@ -1277,16 +1257,11 @@ footer {
     display: none;
 }
 
-/* Light theme styles can be added with a .light-theme class */
 .light-theme {
     /* This will be implemented in JavaScript */
 }
 
-/* ====================
-   Media Queries
-   ==================== */
 
-/* Large devices (laptops/desktops, up to 1200px) */
 @media only screen and (max-width: 1200px) {
     :root {
         --fs-xl: 3rem;
@@ -1303,8 +1278,7 @@ footer {
     }
 }
 
-/* Medium devices (tablets, up to 992px) */
-@media only screen and (max-width: 992px) {
+ @media only screen and (max-width: 992px) {
     :root {
         --fs-xl: 2.8rem;
         --fs-l: 2rem;
@@ -1375,8 +1349,7 @@ footer {
     }
 }
 
-/* Small devices (mobile phones, up to 768px) */
-@media only screen and (max-width: 768px) {
+ @media only screen and (max-width: 768px) {
     :root {
         --fs-xl: 2.5rem;
         --fs-l: 1.8rem;
@@ -1428,7 +1401,7 @@ footer {
     }
 }
 
-/* Extra small devices (small mobile phones, up to 576px) */
+
 @media only screen and (max-width: 576px) {
     :root {
         --fs-xl: 2.2rem;
@@ -1501,4 +1474,3 @@ footer {
         flex-direction: column;
     }
 }
-

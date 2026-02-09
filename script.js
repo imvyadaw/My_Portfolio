@@ -8,7 +8,7 @@ const moonIcon = document.querySelector('.fa-moon');
 const sunIcon = document.querySelector('.fa-sun');
 const contactForm = document.getElementById('contact-form');
 
-// Header scroll effect
+ 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         header.classList.add('header-scroll');
@@ -17,14 +17,14 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Mobile Navigation
+ 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('nav-active');
     hamburger.classList.toggle('active');
     document.body.classList.toggle('no-scroll'); // Prevent body scrolling when menu is open
 });
 
-// Close mobile menu when clicking on a link
+ 
 navLinksItems.forEach(item => {
     item.addEventListener('click', () => {
         if (navLinks.classList.contains('nav-active')) {
@@ -35,11 +35,11 @@ navLinksItems.forEach(item => {
     });
 });
 
-// Theme toggle functionality
+ 
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-theme');
 
-    // Toggle icons
+  
     if (document.body.classList.contains('light-theme')) {
         moonIcon.style.display = 'none';
         sunIcon.style.display = 'block';
@@ -48,12 +48,12 @@ themeToggle.addEventListener('click', () => {
         sunIcon.style.display = 'none';
     }
 
-    // Save theme preference to localStorage
+   
     const theme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
     localStorage.setItem('theme', theme);
 });
 
-// Load saved theme preference
+ 
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sunIcon.style.display = 'block';
     }
 
-    // Add animations with delay for elements
+  
     const animateElements = () => {
         const sections = document.querySelectorAll('section');
 
@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     animateElements();
 });
 
-// Handle contact form submission
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -93,14 +92,13 @@ if (contactForm) {
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
 
-        // Simple form validation
+ 
         if (!name || !email || !subject || !message) {
             alert('Please fill out all fields');
             return;
         }
 
-        // Here you would normally send the form data to a server
-        // For this demo, we'll just show a success message
+  
 
         const formData = {
             name,
@@ -111,7 +109,7 @@ if (contactForm) {
 
         console.log('Form submitted:', formData);
 
-        // Show success message
+   
         const successMessage = document.createElement('div');
         successMessage.className = 'success-message';
         successMessage.innerHTML = `
@@ -119,13 +117,13 @@ if (contactForm) {
             <p>Thank you for your message, ${name}! I'll get back to you soon.</p>
         `;
 
-        // Replace form with success message
+    
         contactForm.innerHTML = '';
         contactForm.appendChild(successMessage);
     });
 }
 
-// Add smooth scrolling to all links
+ 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -143,7 +141,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add typing effect to the binary in hero section
 const binaryElement = document.querySelector('.binary');
 if (binaryElement) {
     const originalText = binaryElement.innerText;
@@ -158,6 +155,5 @@ if (binaryElement) {
         }
     };
 
-    // Start typing effect when page loads
     setTimeout(typeWriter, 1000);
 }

@@ -3,47 +3,155 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>IM_VYADAW | Cyber Certification</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Devlopement Image</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         body {
-
-            background: radial-gradient(circle, rgba(58, 58, 158, 1) 0%, rgba(136, 136, 206, 1) 50%, rgba(58, 58, 158, 1) 100%);
-            animation: glow 5s infinite alternate;
+            background: #060a0f;
+            font-family: 'Inter', sans-serif;
+            color: #9ca3af;
         }
 
-        @keyframes glow {
-            0% {
-                filter: brightness(1);
-            }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
 
-            100% {
-                filter: brightness(1.3);
-            }
+        .cyber-panel {
+            background: #0f1620;
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            box-shadow: 0 40px 120px rgba(0, 0, 0, 0.85);
+            transition: 0.3s ease;
+        }
+
+        .cyber-panel:hover {
+            border-color: rgba(0, 255, 255, 0.4);
+            box-shadow: 0 50px 140px rgba(0, 0, 0, 0.95);
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #00f2ff, transparent);
+        }
+
+        .status-badge {
+            background: rgba(0, 255, 255, 0.08);
+            border: 1px solid #00f2ff;
+            color: #00f2ff;
+            font-size: 12px;
+            padding: 4px 12px;
+            letter-spacing: 1px;
+        }
+
+        .btn-cyber {
+            border: 1px solid #00f2ff;
+            padding: 8px 22px;
+            font-size: 13px;
+            transition: 0.3s ease;
+        }
+
+        .btn-cyber:hover {
+            background: #00f2ff;
+            color: black;
+            box-shadow: 0 0 25px #00f2ff;
+        }
+
+        .label {
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #6b7280;
         }
     </style>
 </head>
 
-<body class="flex flex-col items-center justify-center min-h-screen">
-    <!-- Title -->
-    <h1 class="text-white text-4xl font-bold mb-6 text-center">IM_VYADAW</h1>
+<body class="min-h-screen flex flex-col">
 
-    <div class="relative group">
-        <!-- Glassmorphism Background -->
-        <div class="absolute inset-0 bg-white/10 backdrop-blur-lg rounded-xl shadow-lg"></div>
+    <div class="flex justify-between items-center px-10 py-6 border-b border-cyan-900/20">
+        <a href="index.html" class="text-sm text-gray-400 hover:text-white transition">
+            ← RETURN
+        </a>
 
-        <!-- Image Container -->
-        <div class="relative p-2 rounded-xl overflow-hidden">
-            <img src="assets/Web development.jpg" alt="Web Development"
-                class="w-[900px] h-auto object-cover rounded-xl shadow-xl transform group-hover:scale-105 transition duration-300">
+        <span class="text-xs tracking-widest text-cyan-400">
+            CYBER CREDENTIAL INTERFACE
+        </span>
+    </div>
+
+     
+    <div class="flex flex-1 items-center justify-center px-6 py-16">
+
+        <div class="cyber-panel w-full max-w-5xl p-12 rounded-xl">
+
+      
+            <div class="mb-10">
+                <p class="label">CERTIFICATION MODULE</p>
+                <h1 class="text-3xl text-white mt-3 leading-snug">
+                    Full-Stack Development & Secure Architecture Certification
+                </h1>
+            </div>
+
+            <div class="divider mb-10"></div>
+
+            <div class="grid md:grid-cols-2 gap-14 items-center">
+
+       
+                <div class="bg-black border border-cyan-900/30 p-5 rounded-lg">
+                    <img src="assets/Web development.jpg" alt="Certificate" class="w-full object-contain max-h-[420px]">
+                </div>
+
+        
+                <div>
+
+                    <div class="mb-8">
+                        <p class="label">STATUS</p>
+                        <span class="status-badge">AUTHENTICATED & VERIFIED</span>
+                    </div>
+
+                    <div class="mb-8">
+                        <p class="label">ISSUED DATE</p>
+                        <p class="text-gray-300 mt-2">2026</p>
+                    </div>
+
+                    <div class="mb-10">
+                        <p class="label">TECHNICAL SUMMARY</p>
+                        <p class="text-gray-400 mt-3 text-sm leading-relaxed">
+                            Successfully completed advanced full-stack development training
+                            emphasizing secure coding practices, modular system design,
+                            scalable infrastructure, and performance optimization aligned
+                            with modern cybersecurity standards.
+                        </p>
+                    </div>
+
+                    <div class="flex gap-5">
+                        <a href="assets/Web development.jpg" target="_blank" class="btn-cyber rounded-md">
+                            ACCESS DOCUMENT
+                        </a>
+
+                        <a href="assets/Web development.jpg" download class="btn-cyber rounded-md">
+                            EXPORT COPY
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
+
     </div>
-    <div class="mt-6 text-center">
-        <a href="index.html"
-            class="bg-blue-500   text-black py-3 px-5 rounded-lg hover:bg-blue-600 transition duration-300">Back To
-            Home</a>
+
+    <div class="text-center py-5 border-t border-cyan-900/20 text-xs text-gray-600">
+        © 2026 IM_VYADAW // VERIFIED CYBER CREDENTIAL
     </div>
+
 </body>
 
 </html>
