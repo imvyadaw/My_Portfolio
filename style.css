@@ -1257,9 +1257,6 @@ footer {
     display: none;
 }
 
-.light-theme {
-    /* This will be implemented in JavaScript */
-}
 
 
 @media only screen and (max-width: 1200px) {
