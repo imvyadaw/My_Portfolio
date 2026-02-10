@@ -481,73 +481,6 @@ nav {
 }
 
  
-.skills {
-    padding: var(--spacing-xl) 0;
-    background-color: var(--primary-dark);
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-l);
-}
-
-.skill-category h3 {
-    position: relative;
-    display: inline-block;
-    margin-bottom: var(--spacing-m);
-    padding-bottom: var(--spacing-xs);
-}
-
-.skill-category h3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-color-3));
-    border-radius: 2px;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: var(--spacing-s);
-}
-
-.skill-item {
-    background-color: var(--tertiary-dark);
-    border-radius: var(--border-radius);
-    padding: var(--spacing-s);
-    text-align: center;
-    transition: var(--transition);
-    cursor: default;
-    position: relative;
-    overflow: hidden;
-}
-
-.skill-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: linear-gradient(180deg, var(--accent-color), var(--accent-color-2));
-    transition: var(--transition);
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--box-shadow), 0 0 15px rgba(0, 238, 255, 0.5);
-}
-
-.skill-item span {
-    color: var(--text-secondary);
-    font-weight: 500;
-    font-size: var(--fs-xs);
-}
 
  
 .projects {
@@ -700,7 +633,8 @@ nav {
 
 .timeline-content:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 8px rgba(0,212,255,0.4);
+
 }
 
 .timeline-content h3 {
@@ -769,7 +703,9 @@ nav {
 
 .certification-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.8);
+    /* box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.8); */
+        box-shadow: 0 0 18px rgba(0,212,255,0.4);
+
 }
 
 .certification-logo {
@@ -834,7 +770,8 @@ nav {
 
 .achievement-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 18px rgba(0,212,255,0.4);
+
 }
 
 .achievement-icon {
@@ -894,7 +831,8 @@ nav {
 
 .training-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 18px rgba(0,212,255,0.4);
+
 }
 
 .training-icon {
@@ -1469,5 +1407,216 @@ footer {
     .footer-links {
         gap: var(--spacing-s);
         flex-direction: column;
+    }
+}
+.skills-grid-smart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.skill-box {
+    background: #0d1117;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #1f2937;
+    transition: 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(0,245,196,0.15);
+}
+
+.skill-box h3 {
+    margin-bottom: 20px;
+    color: #00f5c4;
+    font-size: 17px;
+}
+
+.highlight {
+    border: 1px solid #00f5c4;
+    background: linear-gradient(145deg, #0d1117, #0b0f15);
+}
+
+.skill-item-smart {
+    margin-bottom: 20px;
+}
+
+.skill-info span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.skill-info small {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background: #1f2937;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #00f5c4;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    background: #111827;
+    border: 1px solid #1f2937;
+    transition: 0.3s;
+}
+
+.tags span:hover {
+    background: #00f5c4;
+    color: #000;
+}
+
+/* =========================
+   NEO LIGHT ABOUT
+========================= */
+
+.about.neo {
+    padding: 120px 0;
+    background: radial-gradient(
+        circle at 80% 20%,
+        rgba(0,212,255,0.08),
+        transparent 50%
+    ),
+    var(--bg-secondary);
+}
+
+.neo-title {
+    text-shadow: 0 0 8px rgba(0,212,255,0.4);
+}
+
+.neo-line {
+    box-shadow: 0 0 10px var(--accent);
+}
+
+/* Layout */
+
+.about-neo-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 70px;
+    margin-top: 70px;
+    align-items: center;
+}
+
+/* Left Side */
+
+.neo-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 0.7rem;
+    border-radius: 20px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 12px rgba(0,212,255,0.25);
+}
+
+.neo-heading {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+}
+
+.about-neo-left p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+/* Neon Skills */
+
+.neo-skills {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.neo-skills span {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    background: rgba(0,212,255,0.05);
+    border: 1px solid rgba(0,212,255,0.3);
+    transition: 0.3s ease;
+}
+
+.neo-skills span:hover {
+    box-shadow: 0 0 15px rgba(0,212,255,0.4);
+    border-color: var(--accent);
+}
+
+/* Right Card */
+
+.about-neo-card {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(16px);
+    border-radius: 18px;
+    padding: 40px;
+    border: 1px solid rgba(0,212,255,0.25);
+    box-shadow: 0 0 25px rgba(0,212,255,0.08);
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.about-neo-card:hover {
+    box-shadow: 0 0 35px rgba(0,212,255,0.2);
+    transform: translateY(-6px);
+}
+
+.neo-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    color: var(--text-secondary);
+}
+
+.neo-row i {
+    color: var(--accent);
+    font-size: 1.1rem;
+    text-shadow: 0 0 6px rgba(0,212,255,0.6);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .about-neo-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .neo-row {
+        justify-content: center;
+    }
+
+    .neo-skills {
+        justify-content: center;
     }
 }
